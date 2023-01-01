@@ -6,7 +6,7 @@ function ClientProjectsPage() {
   function loadProjectHandler() {
     //load data
     // router.push("/clients/max/projecta");
-    router.replace("/clients/max/projecta");
+    router.replace("/clients/max/projectb");
   }
 
   return (
