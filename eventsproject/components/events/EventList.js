@@ -1,8 +1,9 @@
 import EventItem from "./EventItem";
+import classes from "./eventlist.module.css";
 
 function EventList({ items }) {
   return (
-    <ul>
+    <ul className={classes.list}>
       {items.map((item) => {
         return (
           <EventItem
