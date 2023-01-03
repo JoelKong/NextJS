@@ -29,12 +29,15 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
+  const filePath = path.join(process.cwd(), "dummy-backend.json");
+  const jsonData = await fs.readFile(filePath);
+  const data = JSON.parse(jsonData);
+
+  const ids = data.products.map((product) => product.id);
+  const params = ids.map((id) => ({ params: { pid: id } }));
+
   return {
-    paths: [
-      { params: { pid: "p1" } },
-      { params: { pid: "p2" } },
-      { params: { pid: "p3" } },
-    ],
+    paths: params,
     fallback: false,
   };
 }
