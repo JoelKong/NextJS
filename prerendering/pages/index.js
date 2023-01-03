@@ -7,3 +7,5 @@ function HomePage() {
     </ul>
   );
 }
+
+export default HomePage;
