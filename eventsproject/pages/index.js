@@ -16,6 +16,7 @@ export async function getStaticProps() {
       //firebase
       featuredEvents: featuredEvents,
     },
+    revalidate: 1800,
   };
 }
 
