@@ -17,4 +17,21 @@ function EventDetailPage() {
   );
 }
 
+export async function getStaticProps(context) {
+  const eventId = context.params.eventId;
+
+  return {
+    props: {
+      selectedEvent: eventId,
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: { params: { eventId: "e1" } },
+    fallback: false,
+  };
+}
+
 export default EventDetailPage;
