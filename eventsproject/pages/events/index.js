@@ -2,6 +2,16 @@ import Head from "next/head";
 import { Fragment } from "react";
 
 function AllEventsPage() {
+  const pageHeadData = (
+    <Head>
+      <title>All Events</title>
+      <meta
+        name="description"
+        content="Find a lot of great events that allow you to evolve"
+      />
+    </Head>
+  );
+
   return (
     <Fragment>
       <Head>
